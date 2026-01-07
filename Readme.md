@@ -32,7 +32,7 @@ Unlike traditional models that rely only on numeric features, this project incor
 - **256 × 256 satellite images**
 - Downloaded using **ESRI World Imagery API**
 - Images represent the surrounding neighborhood of each property
-  
+
 ---
 
 ## Environment Setup
@@ -41,24 +41,40 @@ Unlike traditional models that rely only on numeric features, this project incor
 ```bash
 conda create -n multimodal python=3.9
 conda activate multimodal
-------
 
-#### Install Required Libraries
+
+#Install Required Libraries
 pip install pandas numpy matplotlib seaborn scikit-learn
 pip install torch torchvision
 pip install opencv-python tqdm requests xgboost
 
-###Download Satellite Images (Training Data)
+#How to Run the Project
+#Download Satellite Images (Training Data)
 python data_fetcher.py
 
-### Download Satellite Images (Testing Data)
+#Download Satellite Images (Testing Data)
 python data_fetcher_for_test_dataset.py
 
-### Tabular Data Processing and Model Training
+#Tabular Data Processing and Model Training
 jupyter notebook tabular_model_final.ipynb
 
-### Image Feature Extraction and Multimodal Fusion
+#Image Feature Extraction and Multimodal Fusion
 jupyter notebook multimodal.ipynb
 
-### Final Predictions are saved as:
+# Evaluation Metrics
 
+Model performance is evaluated using:
+- Root Mean Squared Error (RMSE)
+- R² Score
+
+Performance comparison is carried out between:
+- Tabular-only model
+- Multimodal model (Tabular + Satellite Images)
+
+The multimodal model demonstrates improved predictive performance over the tabular-only baseline.
+--
+
+#Final Predictions
+Predictions are saved as:
+-price_predictions_tabular only.csv
+-final_price_predictions.csv
