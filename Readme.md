@@ -56,7 +56,7 @@ python data_fetcher.py
 python data_fetcher_for_test_dataset.py
 
 #Tabular Data Processing and Model Training
-jupyter notebook tabular_model_final.ipynb
+jupyter notebook tabular_model.ipynb
 
 #Image Feature Extraction and Multimodal Fusion
 jupyter notebook multimodal.ipynb
@@ -76,5 +76,5 @@ The multimodal model demonstrates improved predictive performance over the tabul
 
 #Final Predictions
 Predictions are saved as:
--price_predictions_tabular only.csv
--final_price_predictions.csv
+-23112093_final.csv (price_predictions_tabular only).
+-23112093_final1.csv (sattellite images + tabular_price_predictions)
